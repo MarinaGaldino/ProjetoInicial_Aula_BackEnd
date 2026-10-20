@@ -9,6 +9,7 @@ from django.http import HttpResponse
 # def sobre(request):
 #     return HttpResponse("sobre")
 
+
 from django.shortcuts import render
 
 
@@ -58,6 +59,8 @@ def home(request):
         },
     ]
 
-    return render(request, "catalogo/home.html", {
-        "produtos": produtos,
-    })
+    return render(
+        request,
+        "catalogo/home.html",
+        {"produtos": produtos},
+    )
